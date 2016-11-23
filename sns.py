@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 def msg_process(msg, tstamp):
     message = json.loads(msg)
-    # process message here
+    # process message here. Eg write to S3 bucket or push to ArcSight
     print(message)
 
 @app.route('/', methods = ['GET', 'POST', 'PUT'])
